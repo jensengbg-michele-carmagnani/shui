@@ -1,0 +1,66 @@
+{
+  "user": [
+    {
+      "uuid": "fHHsPSTHms",
+      "username": "matilda",
+      "password": "$2b$10$b/1S4rSDlIj1WbvLFZiDXu1ymGGbAxnX9Eu7woHcEmBz9Kig0QNrK",
+      "userkey": "U2FsdGVkX19/9cZBK3F0+CiBk0VWmft7Q3DS8nWRCZA=",
+      "followedhashtags": [
+        "#swedenOnFire",
+        "#Göteborg"
+      ]
+    },
+    {
+      "uuid": "-GNI0ZzGre",
+      "username": "michele",
+      "password": "$2b$10$pqMQrqoNaeamuIib0xjGSOzzW671sO9mO5zd1nfuq9guzLyukTUHW",
+      "userkey": "U2FsdGVkX19Z1NFC7H/aCxyTMcJLu7RhfTk6t3zhhRQ=",
+      "followedhashtags": []
+    },
+    {
+      "uuid": "uaSbp1MoU2",
+      "username": "alessandro",
+      "password": "$2b$10$p.GNI5YcfgI/ZpZ8ORsu6.nL5VhPxFbKIgdlMkKL3VQ1uE1YYViwS",
+      "userkey": "U2FsdGVkX18BKv9BvORXgh0w/IXgzFe3q78c9MI6A5A=",
+      "followedhashtags": []
+    }
+  ],
+  "flows": [
+    {
+      "flowId": "TO5dEeayN",
+      "hashtag": "#swedenOnFire",
+      "info": "dfasdfasdf",
+      "author": "matilda"
+    },
+    {
+      "flowId": "6EWd3PuAE",
+      "hashtag": "#Göteborg",
+      "info": "dfas",
+      "author": "matilda"
+    },
+    {
+      "flowId": "lcRFSjT_x",
+      "hashtag": "#Båros",
+      "info": "dfas",
+      "author": "matilda"
+    },
+    {
+      "flowId": "WQfVUan4O",
+      "hashtag": "#Båros",
+      "info": "dfas",
+      "author": "michele"
+    },
+    {
+      "flowId": "QJG8qX0ax",
+      "hashtag": "#Bstockholm",
+      "info": "dfas",
+      "author": "michele"
+    },
+    {
+      "flowId": "RNTmbkAOK",
+      "hashtag": "#Bstockholm",
+      "info": "dfas",
+      "author": "michele"
+    }
+  ]
+}
