@@ -17,8 +17,9 @@ router.post("/", (req, res) => {
   console.log("token", token);
 
   try {
+
+
     // verify token
-    
     const verified_user = jwt.verify(token, process.env.JWT_KEY);
     console.log('verified_user',verified_user)
       

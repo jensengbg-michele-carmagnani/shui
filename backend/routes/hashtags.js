@@ -1,22 +1,25 @@
 const { Router } = require("express");
 const { db } = require("./db");
 const router = new Router();
-const { jwt } = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 router.get("/", (req, res) => {
-
-  // const token = req.headers["authorization"].split(" ")[1];
-  // const verified_user = jwt.verify(token, process.env.JWT_KEY);
-  // // if not verify unauthorized request
-  // if (!verified_user) return res.sendStatus(401);
+  const token = req.headers["authorization"].split(" ")[1];
 
   try {
-    const hastag = db.get("flows").filter("hashtag").value();
-    console.log("hashtag", hastag);
-    res.send(hastag);
-    
+    //verify token
+    const verified_user = jwt.verify(token, process.env.JWT_KEY);
+    console.log("Verified", verified_user);
+
+    const flows = db.get("flows").value();
+    console.log("Flows", flows);
+   // map a new array with the only hashtag
+    const hastags = flows.map((hashtag) => ( {hashtag: hashtag.hashtag} ));
+    console.log("hastags", hastags);
+
+    res.status(200).send(hastags);
   } catch (error) {
-    res.sendStatus(404).send(error)
+    res.sendStatus(404);
   }
 });
 
