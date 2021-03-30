@@ -1,6 +1,6 @@
 <template>
-  <section id="home">
-    <img src="../assets/topS.png" alt="Shui">
+  <section @click="goto" id="home">
+    <img class="lable-shui" src="../assets/topS.png" alt="Shui">
     <article class="main">
        <img src="../assets/logo.png" alt="Shui">
        
@@ -15,6 +15,12 @@
 
 export default {
   name: 'Home',
+
+ methods: {
+   goto(){
+     this.$router.push('/login')
+   }
+ },
  
 }
 </script>

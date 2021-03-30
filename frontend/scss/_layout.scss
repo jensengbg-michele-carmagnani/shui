@@ -16,6 +16,94 @@
     background-image: url('../src/assets/flame.png');
     background-position: bottom;
     background-repeat: no-repeat;
+    .lable-shui{
+      position: fixed;
+      top: 0px;
+      left: 5%;
+    }
+   
+    .main{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      
 
+    }
+  }
+  #login{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    background-image: url('../src/assets/flame.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    .lable-shui{
+      position: fixed;
+      top: 0px;
+      left: 5%;
+    }
+     .sign-up{
+      position: fixed;
+      top: 20px;
+      left: 70%;
+    }
+    .main{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 4rem;
+      
+    }
+   
+    .input-field{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      height: 30%;
+      
+    }
+  }
+  #sign-up{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    background-image: url('../src/assets/flame.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    .lable-shui{
+      position: fixed;
+      top: 0px;
+      left: 5%;
+    }
+    .main{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 4rem;
+      
+    }
+   
+    .input-field{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      height: 30%;
+      
+    }
   }
 }

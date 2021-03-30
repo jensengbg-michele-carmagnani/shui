@@ -1,11 +1,11 @@
 <template>
-   <section id="login">
-  
+  <section id="login">
+    <img class="lable-shui" src="../assets/topS.png" alt="Shui" />
+    <img @click="signUp" class="sign-up" src="../assets/signup.png" alt="Sign-up"/>
+    <article class="main">
+      <img src="../assets/logo.png" alt="Shui" />
 
-    <article class="logo">
-      <img src="@/assets/logo.png" alt="" />
-      <h2>KEEP YOUR</h2>
-      <h2>PASSWORD SAFE</h2>
+      <h4>flow freely</h4>
     </article>
 
     <article class="input-field">
@@ -25,21 +25,31 @@
       />
     </article>
 
-    <button @click="letMeIn" class="btn-letmein">ogin</button>
-    </section>
+    <button @click="login" class="btn-letmein">login</button>
+  </section>
 </template>
 
 <script>
 export default {
-  name:"Login",
+  name: "Login",
   data() {
     return {
-      
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      this.$store.dispatch("login", {
+        username: this.username,
+        password: this.password,
+      });
+    },
+    signUp(){
+      this.$router.push("/signup")
     }
   },
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
