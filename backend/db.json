@@ -1,28 +1,25 @@
 {
   "user": [
     {
-      "uuid": "fHHsPSTHms",
-      "username": "matilda",
-      "password": "$2b$10$b/1S4rSDlIj1WbvLFZiDXu1ymGGbAxnX9Eu7woHcEmBz9Kig0QNrK",
-      "userkey": "U2FsdGVkX19/9cZBK3F0+CiBk0VWmft7Q3DS8nWRCZA=",
+      "uuid": "uaSbp1MoU2",
+      "username": "alessandro",
+      "password": "$2b$10$p.GNI5YcfgI/ZpZ8ORsu6.nL5VhPxFbKIgdlMkKL3VQ1uE1YYViwS",
+      "userkey": "U2FsdGVkX18BKv9BvORXgh0w/IXgzFe3q78c9MI6A5A=",
       "followedhashtags": [
         "#swedenOnFire",
         "#Göteborg"
       ]
     },
     {
-      "uuid": "-GNI0ZzGre",
-      "username": "michele",
-      "password": "$2b$10$pqMQrqoNaeamuIib0xjGSOzzW671sO9mO5zd1nfuq9guzLyukTUHW",
-      "userkey": "U2FsdGVkX19Z1NFC7H/aCxyTMcJLu7RhfTk6t3zhhRQ=",
-      "followedhashtags": []
-    },
-    {
-      "uuid": "uaSbp1MoU2",
-      "username": "alessandro",
-      "password": "$2b$10$p.GNI5YcfgI/ZpZ8ORsu6.nL5VhPxFbKIgdlMkKL3VQ1uE1YYViwS",
-      "userkey": "U2FsdGVkX18BKv9BvORXgh0w/IXgzFe3q78c9MI6A5A=",
-      "followedhashtags": []
+      "uuid": "QGFQKT3tmm",
+      "username": "matilda",
+      "password": "$2b$10$oEVHKcoKUKjUvT/FSXGwAeZxh4KuLKfbHJAohZyM1n/KQs44M.kXS",
+      "userkey": "U2FsdGVkX1+hqR+p6QGJ5wvsdp2UBSFp6cxe45v5mp4=",
+      "followedhashtags": [
+        "#Båros",
+        "#swedenOnFire",
+        "#Stockholm"
+      ]
     }
   ],
   "flows": [
@@ -30,13 +27,13 @@
       "flowId": "TO5dEeayN",
       "hashtag": "#swedenOnFire",
       "info": "dfasdfasdf",
-      "author": "matilda"
+      "author": "Anonymous"
     },
     {
       "flowId": "6EWd3PuAE",
       "hashtag": "#Göteborg",
       "info": "dfas",
-      "author": "matilda"
+      "author": "Anonymous"
     },
     {
       "flowId": "lcRFSjT_x",
@@ -52,7 +49,7 @@
     },
     {
       "flowId": "QJG8qX0ax",
-      "hashtag": "#Bstockholm",
+      "hashtag": "#Stockholm",
       "info": "dfas",
       "author": "michele"
     },
@@ -61,6 +58,18 @@
       "hashtag": "#Bstockholm",
       "info": "dfas",
       "author": "michele"
+    },
+    {
+      "flowId": "DdIXGnPZx",
+      "hashtag": "#Malmö",
+      "info": "fdadfa",
+      "author": "michele"
+    },
+    {
+      "flowId": "KzwOzy4Kf",
+      "hashtag": "#Malmö",
+      "info": "fire on the University of Malmö close the windows",
+      "author": "matilda"
     }
   ]
 }
