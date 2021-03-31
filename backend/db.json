@@ -20,6 +20,20 @@
         "#swedenOnFire",
         "#Stockholm"
       ]
+    },
+    {
+      "uuid": "SPDajYm6g8",
+      "username": "michele",
+      "password": "$2b$10$h.eSlppJX7i0fdLHZoz0cuXY2L3mr1X38M87azZGOq8flSN1D/OtC",
+      "userkey": "U2FsdGVkX19hDgg4xNr5YdoWcxA46/rvFECdlPd6AXw=",
+      "followedhashtags": []
+    },
+    {
+      "uuid": "VwR2b58Hzd",
+      "username": "federica",
+      "password": "$2b$10$GAobknV9MexI7lnKBxxSkeEFaWjGSbqLg4Bvo5/pw.fOFF8dVIfL2",
+      "userkey": "U2FsdGVkX1+9EF5IF4nVMmHd/eLGO6uQiWXQPB8V5rw=",
+      "followedhashtags": []
     }
   ],
   "flows": [
@@ -69,6 +83,20 @@
       "flowId": "KzwOzy4Kf",
       "hashtag": "#Malmö",
       "info": "fire on the University of Malmö close the windows",
+      "author": "matilda"
+    },
+    {
+      "flowId": "n_NoE5pCO",
+      "date": "2021-03-31T09:48:19.996Z",
+      "hashtag": "#Milano",
+      "info": "fire on the University of Milan close the windows",
+      "author": "matilda"
+    },
+    {
+      "flowId": "-ne5mG6GT",
+      "date": "2021-03-31T09:49:50.182Z",
+      "hashtag": "#Oslo",
+      "info": "fire on the University of Oslo close the windows",
       "author": "matilda"
     }
   ]

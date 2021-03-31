@@ -1,0 +1,46 @@
+#flow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 170px;
+    background-color: #ffff;
+    
+
+    .date {
+      margin: 0.3rem 0 0.5rem 0.5rem;
+      color: #000;
+      font-weight: 100;
+      align-self: flex-start;
+    }
+
+    .content-text {
+      color: black;
+    }
+    .author {
+      margin: 5rem 0 0 1rem;
+      align-self: flex-start;
+      color: #000;
+    }
+
+    .hashtag {
+      width: 100%;
+      background-color: var(--main-bg-color);
+      text-align: end;
+      padding-top: 0.4rem;
+      padding-right: 3rem;
+      color: var(--third-text-color);
+      border: 0;
+    }
+  }
+}

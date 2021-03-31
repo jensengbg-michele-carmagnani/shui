@@ -1,6 +1,5 @@
 <template>
   <section id="sign-up">
-    <img class="lable-shui" src="../assets/topS.png" alt="Shui" />
     <article class="main">
       <img src="../assets/logo.png" alt="Shui" />
 
@@ -24,7 +23,7 @@
       />
     </article>
 
-    <button @click="login" class="btn-letmein">Sign up</button>
+    <button @click="create" class="btn-letmein">Sign up</button>
   </section>
 </template>
 
@@ -38,8 +37,8 @@ export default {
     };
   },
   methods: {
-    login() {
-      this.$store.dispatch("login", {
+    create() {
+      this.$store.dispatch("signup", {
         username: this.username,
         password: this.password,
       });

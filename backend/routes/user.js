@@ -12,11 +12,11 @@ router.post("/", async (req, res) => {
   console.log("NewUser", credential);
 
   if (req.body.username && req.body.password) {
-    let available = db
+    let unavailable = db
       .get("user")
       .find({ username: req.body.username })
       .value();
-    if (available)
+    if (unavailable)
       return res
         .status(403)
         .send("Username is already in use!! Try another one...");
@@ -31,8 +31,6 @@ router.post("/", async (req, res) => {
       process.env.SECRET // "Secret Passphrase" environment variable
     ).toString();
 
-    console.log("after encrypted_user_key", ENCRYPTED_USER_KEY);
-    console.log("ENCRYPTED_USER_KEY", ENCRYPTED_USER_KEY);
     let user = {
       uuid: shortid.generate(),
       username: req.body.username,

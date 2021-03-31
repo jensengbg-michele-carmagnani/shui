@@ -4,11 +4,12 @@ const { db } = require("./db");
 const router = new Router();
 
 router.get("/", (req, res) => {
-  const token = req.headers["authorization"].split(" ")[1];
+  
+  // const token = req.headers["authorization"].split(" ")[1];
 
   try {
     // verify the token 
-    const verify_user = jwt.verify(token, process.env.JWT_KEY);
+    // const verify_user = jwt.verify(token, process.env.JWT_KEY);
     
     const flows = db.get("flows").value();
     console.log("flows", flows);

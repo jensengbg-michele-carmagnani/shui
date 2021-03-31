@@ -7,3 +7,12 @@
   --main-btn-color: #ffffff;
   --second-btn-color:#082756;
 }
+
+@mixin easeOut {
+  
+  transition: 1s ease-out;
+}
+@mixin easeIn {
+  
+  transition: 1s ease-out;
+}

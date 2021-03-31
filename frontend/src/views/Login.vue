@@ -1,6 +1,5 @@
 <template>
   <section id="login">
-    <img class="lable-shui" src="../assets/topS.png" alt="Shui" />
     <img @click="signUp" class="sign-up" src="../assets/signup.png" alt="Sign-up"/>
     <article class="main">
       <img src="../assets/logo.png" alt="Shui" />

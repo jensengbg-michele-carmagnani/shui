@@ -29,10 +29,13 @@ router.post("/", (req, res) => {
     // create the new flow
     let newflow = {
       flowId: shortid.generate(),
+      date: new Date(),
       hashtag: req.body.hashtag,
       info: req.body.info,
       author: user.username,
     };
+
+    console.log('newFlow', newflow)
     // push the flow into db
     db.get("flows").push(newflow).write();
 
