@@ -61,7 +61,10 @@
       justify-content: center;
       align-items: center;
       flex-flow: column;
-      height: 30%;
+      width: 80%;
+    }
+    .btn-login {
+      width: 80%;
     }
   }
   #sign-up {
@@ -118,16 +121,16 @@
       }
     }
   }
-  #new-flow{
+  #new-flow {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    background-color:  var(--main-bg-color);
-    
-      .text {
-       height: 400px;
+    background-color: var(--main-bg-color);
+
+    .text {
+      height: 400px;
       width: 90%;
       border: 1px solid white;
       overflow: auto;
@@ -135,8 +138,10 @@
       margin: 5rem 0 5rem 0;
       color: #000;
       text-align: center;
+      padding-top: 1rem;
     }
-    .publish{
+    .publish {
+      width: 90%;
       background-color: var(--second-bg-color);
     }
   }

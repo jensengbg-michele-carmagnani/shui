@@ -16,6 +16,9 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    async checkStatus() {
+      
+    },
     async newFlow(ctx, newFlow) {
       await ax.post(`${ctx.state.API}/newflow`, {
         info: newFlow.info,

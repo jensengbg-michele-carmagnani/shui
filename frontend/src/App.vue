@@ -4,6 +4,15 @@
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+  beforeMount() {
+    this.$store.dispatch('checkStatus')
+  },
+}
+</script>
+
+}
 
 <style lang="scss">
 

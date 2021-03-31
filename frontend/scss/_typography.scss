@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Cantarell&display=swap");
 
 * {
   font-family: "Lato", sans-serif;
@@ -19,29 +18,25 @@ h2 {
   font-size: 3rem;
   color: var(--main-text-color);
   font-weight: bold;
-  
 }
 
 h3 {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
-  font-weight:bold ;
-  
+  font-weight: bold;
 }
 
 h4 {
   margin: 0;
   padding: 0;
   color: var(--third-text-color);
- text-transform: uppercase;
-  
+  text-transform: uppercase;
 }
 
-p{
+p {
   color: #ffffff;
   text-align: center;
-
 }
 
 label {
@@ -66,13 +61,11 @@ input {
   margin-bottom: 2rem;
   text-align: center;
   cursor: pointer;
-  
 }
 button {
   background-color: var(--main-btn-color);
-  width: 90%;
+
   height: 62px;
-  
   font-size: 24px;
   font-weight: 800;
   text-transform: capitalize;

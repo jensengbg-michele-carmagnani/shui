@@ -24,7 +24,7 @@
       />
     </article>
 
-    <button @click="login" class="btn-letmein">login</button>
+    <button @click="login" class="btn-login">login</button>
   </section>
 </template>
 
