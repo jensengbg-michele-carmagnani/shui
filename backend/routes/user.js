@@ -16,26 +16,29 @@ router.post("/", async (req, res) => {
       .get("user")
       .find({ username: req.body.username })
       .value();
-    if (unavailable)
+
+    if (unavailable) 
       return res
         .status(403)
         .send("Username is already in use!! Try another one...");
+    
     // hash pwd with bcrypt
-    const ENCRYPTED_PW = await bcrypt.hash(req.body.password, 10);
-    //generate userkey
-    const USER_KEY = shortid.generate();
-
-    // encrypt USER_KEY & SECRET with CryptoJS
-    const ENCRYPTED_USER_KEY = CryptoJS.AES.encrypt(
-      USER_KEY, // "Messsagge"  generate by shortid.generate()
-      process.env.SECRET // "Secret Passphrase" environment variable
+    const ENCRYPTED_PW =  CryptoJS.AES.encrypt(
+      req.body.password,
+      process.env.SECRET
     ).toString();
+
+    //generate userkey
+    
+
+
+  
+  
 
     let user = {
       uuid: shortid.generate(),
       username: req.body.username,
       password: ENCRYPTED_PW, // hashed with bycrypt module
-      userkey: ENCRYPTED_USER_KEY, // encrypted with with CryptoJS & the {obj} contain the USER_KEY(generate by shortid module) + env SECRET
       followedhashtags: [],
     };
     console.log("User created", user);

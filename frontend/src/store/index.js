@@ -8,34 +8,57 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     API: "http://localhost:3000",
-    flows:Array
+    flows: Array,
+    followed:Array
   },
   mutations: {
+    setFollowed(state, followed) {
+      state.followed = followed
+    },
     setFlows(state, flows) {
-      state.flows = flows
-    }
+      state.flows = flows;
+    },
   },
   actions: {
-    async checkStatus() {
-      
+    async checkStatus() { },
+    async followedHashtags(ctx) {
+      const followed = await ax.get(`${ctx.state.API}/followedhashtags`,
+       
+        {
+          headers: {
+            'authorization': `Bearer ${sessionStorage.getItem("shuiToken")}`,
+          },
+        });
+      console.log("Followed_Hashtags in vuex", followed);
+      ctx.commit('setFollowed', followed.data)
     },
-    async newFlow(ctx, newFlow) {
-      await ax.post(`${ctx.state.API}/newflow`, {
-        info: newFlow.info,
-        hashtags: newFlow.hashtags
-       })
+    async createFlow(ctx,newFlow) {
+      const createdflow = await ax.post(
+        `${ctx.state.API}/newflow`,
+        {
+          info: newFlow.info,
+          hashtags: newFlow.hashtags,
+        },
+        {
+          headers: {
+            'authorization': `Bearer ${sessionStorage.getItem("shuiToken")}`,
+          },
+        }
+      );
+      router.push('/flows')
+      console.log("newflow", createdflow);
     },
     async getFlows(ctx) {
       try {
         const flows = await ax.get(`${ctx.state.API}/flows`, {
           headers: {
-            Authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
+            'authorization': `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
         });
-        console.log('FLOWS',flows)
-        ctx.commit('setFlows',flows.data)
+        console.log("FLOWS", flows);
+        ctx.commit("setFlows", flows.data);
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
     },
     async signup(ctx, data) {
@@ -54,22 +77,19 @@ export default new Vuex.Store({
     },
     async login(ctx, data) {
       try {
-        const token = await ax.post(
-          `${ctx.state.API}/auth/login`,
-          {
-            username: data.username,
-            password: data.password,
-          },
-          
-        );
+        const token = await ax.post(`${ctx.state.API}/auth/login`, {
+          username: data.username,
+          password: data.password,
+        });
         console.log("TOKEN & USERKEY", token.data);
         sessionStorage.setItem("shuiToken", token.data.token);
-        sessionStorage.setItem("shuiToken", token.data.userkey);
-        router.push('/flows')
+        router.push("/flows");
+
       } catch (error) {
         console.error(error);
       }
     },
   },
   modules: {},
+  
 });

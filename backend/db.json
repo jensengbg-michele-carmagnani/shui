@@ -1,103 +1,60 @@
 {
   "user": [
     {
-      "uuid": "uaSbp1MoU2",
-      "username": "alessandro",
-      "password": "$2b$10$p.GNI5YcfgI/ZpZ8ORsu6.nL5VhPxFbKIgdlMkKL3VQ1uE1YYViwS",
-      "userkey": "U2FsdGVkX18BKv9BvORXgh0w/IXgzFe3q78c9MI6A5A=",
-      "followedhashtags": [
-        "#swedenOnFire",
-        "#Göteborg"
-      ]
-    },
-    {
-      "uuid": "QGFQKT3tmm",
-      "username": "matilda",
-      "password": "$2b$10$oEVHKcoKUKjUvT/FSXGwAeZxh4KuLKfbHJAohZyM1n/KQs44M.kXS",
-      "userkey": "U2FsdGVkX1+hqR+p6QGJ5wvsdp2UBSFp6cxe45v5mp4=",
-      "followedhashtags": [
-        "#Båros",
-        "#swedenOnFire",
-        "#Stockholm"
-      ]
-    },
-    {
-      "uuid": "SPDajYm6g8",
+      "uuid": "VZc70DGr4",
       "username": "michele",
-      "password": "$2b$10$h.eSlppJX7i0fdLHZoz0cuXY2L3mr1X38M87azZGOq8flSN1D/OtC",
-      "userkey": "U2FsdGVkX19hDgg4xNr5YdoWcxA46/rvFECdlPd6AXw=",
-      "followedhashtags": []
-    },
-    {
-      "uuid": "VwR2b58Hzd",
-      "username": "federica",
-      "password": "$2b$10$GAobknV9MexI7lnKBxxSkeEFaWjGSbqLg4Bvo5/pw.fOFF8dVIfL2",
-      "userkey": "U2FsdGVkX1+9EF5IF4nVMmHd/eLGO6uQiWXQPB8V5rw=",
-      "followedhashtags": []
+      "password": "U2FsdGVkX1/+lwaVajFxIOtPuceeWto4joe8Tohj+Ws=",
+      "followedhashtags": ["#cycling", "#sunny", "#running"]
     }
   ],
   "flows": [
     {
-      "flowId": "TO5dEeayN",
-      "hashtag": "#swedenOnFire",
-      "info": "dfasdfasdf",
-      "author": "Anonymous"
+      "flowId": "pY7nBlrAt",
+      "date": "2021-04-01T11:59:28.585Z",
+      "hashtags": "#sunny #cycling",
+      "info": "dfasfadsf",
+      "author": "michele",
+      "owner": "U2FsdGVkX1+blb62Z1Q4DcMGVrHhMe3VrY87hnFnCSA="
     },
     {
-      "flowId": "6EWd3PuAE",
-      "hashtag": "#Göteborg",
-      "info": "dfas",
-      "author": "Anonymous"
+      "flowId": "60RmoJhpR",
+      "date": "2021-04-01T11:59:30.510Z",
+      "hashtags": "#weeken #running ",
+      "info": "dfasfadsf",
+      "author": "michele",
+      "owner": "U2FsdGVkX18e0h3tD8v5cjdqLDG0v9vjXvmKUFHAtAU="
     },
     {
-      "flowId": "lcRFSjT_x",
-      "hashtag": "#Båros",
-      "info": "dfas",
-      "author": "matilda"
+      "flowId": "estUb32rb",
+      "date": "2021-04-01T12:03:31.928Z",
+      "hashtags": "#allarm, #göteborg",
+      "info": "Fire at the domkyrka do not go through the area because of the intese smoke.",
+      "author": "michele",
+      "owner": "U2FsdGVkX19KO/987ARGueGPP9y+7+PzjillvZaqCaE="
     },
     {
-      "flowId": "WQfVUan4O",
-      "hashtag": "#Båros",
-      "info": "dfas",
-      "author": "michele"
+      "flowId": "nzxIoGBIa",
+      "date": "2021-04-01T12:04:47.514Z",
+      "hashtags": "#hello",
+      "info": "dsfasfsa",
+      "author": "michele",
+      "owner": "U2FsdGVkX199IYIczzVK2SiOfd3GgQzFfRC4p7vpHwQ="
     },
     {
-      "flowId": "QJG8qX0ax",
-      "hashtag": "#Stockholm",
-      "info": "dfas",
-      "author": "michele"
+      "flowId": "-BmemN9Xm",
+      "date": "2021-04-01T12:10:11.273Z",
+      "hashtags": "#Påsk",
+      "info": "Påsk på malmö ",
+      "author": "michele",
+      "owner": "U2FsdGVkX1+5zupyqpYu+hzwMlrqLu4VpPsBUpKD0Z0="
     },
     {
-      "flowId": "RNTmbkAOK",
-      "hashtag": "#Bstockholm",
-      "info": "dfas",
-      "author": "michele"
-    },
-    {
-      "flowId": "DdIXGnPZx",
-      "hashtag": "#Malmö",
-      "info": "fdadfa",
-      "author": "michele"
-    },
-    {
-      "flowId": "KzwOzy4Kf",
-      "hashtag": "#Malmö",
-      "info": "fire on the University of Malmö close the windows",
-      "author": "matilda"
-    },
-    {
-      "flowId": "n_NoE5pCO",
-      "date": "2021-03-31T09:48:19.996Z",
-      "hashtag": "#Milano",
-      "info": "fire on the University of Milan close the windows",
-      "author": "matilda"
-    },
-    {
-      "flowId": "-ne5mG6GT",
-      "date": "2021-03-31T09:49:50.182Z",
-      "hashtag": "#Oslo",
-      "info": "fire on the University of Oslo close the windows",
-      "author": "matilda"
+      "flowId": "A1L62IMTl",
+      "date": "2021-04-01T12:12:56.785Z",
+      "hashtags": "#programmimng #hard-time",
+      "info": "By from my room ",
+      "author": "michele",
+      "owner": "U2FsdGVkX19yc1mKZUC9Jd666hvILVInUvE84rEb8KE="
     }
   ]
 }

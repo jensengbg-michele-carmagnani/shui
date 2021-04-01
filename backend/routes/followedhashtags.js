@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
 
     const user = db.get("user").find({ uuid: verified_user.uuid }).value();
 
-    console.log("floolwed hashtag", user);
+    console.log("floolwed hashtag", user.followedhashtags);
     res.send(user.followedhashtags);
   } catch (error) {
     console.error(error);

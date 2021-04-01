@@ -44,3 +44,20 @@
     }
   }
 }
+#settings{
+  width: 100px;
+  height: auto;
+  background-color: rgb(111, 153, 139);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+
+  .hashtag{
+   padding-right: .4rem;
+  }
+  .trash{
+    width:20px;
+    height: 20px;
+  }
+}

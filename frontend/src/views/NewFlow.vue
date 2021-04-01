@@ -1,19 +1,19 @@
 <template>
   <section id="new-flow">
     <textarea
-      v-bind="info"
+      v-model="info"
       class="text"
       type="text"
       placeholder="Share your message"
     />
 
     <input
-      v-bind="hashtags"
+      v-model="hashtags"
       type="text"
       class="hashtag-input"
       placeholder="#hastags"
     />
-    <button @click="newFlow" class="publish">Publish</button>
+    <button @click="createFlow" class="publish">Publish</button>
   </section>
 </template>
 
@@ -27,8 +27,8 @@ export default {
     };
   },
   methods: {
-    newFlow() {
-      this.$store.dispatch("newFlow", {
+    createFlow() {
+      this.$store.dispatch("createFlow", {
         info: this.info,
         hashtags: this.hashtags,
       });

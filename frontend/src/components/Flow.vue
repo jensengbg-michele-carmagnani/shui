@@ -1,10 +1,10 @@
 <template>
   <article id="flow">
     <section class="content">
-      <p class="date">{{ flow.date }}</p>
-      <p class="content-text">{{ flow.info }}</p>
-      <h4 class="author">--{{ flow.author }}</h4>
-      <h5 class="hashtag">{{ flow.hashtag }}</h5>
+      <p class="date">{{ item.date }}</p>
+      <p class="content-text">{{ item.info }}</p>
+      <h4 class="author">--{{ item.author }}</h4>
+      <h5 class="hashtag">{{ item.hashtags }}</h5>
     </section>
     
   </article>
@@ -14,7 +14,7 @@
 export default {
   name: "Flow",
   props: {
-    flow: Object,
+    item: Object,
   },
 };
 </script>

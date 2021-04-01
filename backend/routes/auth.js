@@ -3,10 +3,9 @@ const { db } = require("./db");
 const router = new Router();
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+
 
 router.post("/login", async (req, res) => {
-  
   console.log("userInfo", req.body);
   // Does user exist??
   let user = await db.get("user").find({ username: req.body.username }).value();
@@ -14,21 +13,18 @@ router.post("/login", async (req, res) => {
   // If exist
   if (user) {
     // Check PWD & compare it with the one in the db
-    const valid = await bcrypt.compare(req.body.password, user.password);
-
+    const bytes = CryptoJS.AES.decrypt(user.password, process.env.SECRET);
+    const DECRYPTED_PW = bytes.toString(CryptoJS.enc.Utf8);
+    
+    
     //If valid PWD
-    if (valid) {
-      //Decrypt  userkey
-      const bytes = CryptoJS.AES.decrypt(user.userkey, process.env.SECRET);
-      const DECRYPTED_USER_KEY = bytes.toString(CryptoJS.enc.Utf8);
-
-      // JWT sign with e variable JWT_KEY
+    if (DECRYPTED_PW == req.body.password) {
+      
       const token = jwt.sign({ uuid: user.uuid }, process.env.JWT_KEY);
-      console.log("DECRYPTED_USER", DECRYPTED_USER_KEY);
+
       // return JWT + KEY to frontend
       res.status(201).send({
         token: token,
-        userkey: DECRYPTED_USER_KEY, // we send back this key to decrypt the my storede password
       });
     } else {
       res.status(403).send("Not data for you!");
