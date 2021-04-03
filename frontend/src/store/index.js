@@ -9,11 +9,11 @@ export default new Vuex.Store({
   state: {
     API: "http://localhost:3000",
     flows: Array,
-    followed:Array
+    followed: Array,
   },
   mutations: {
     setFollowed(state, followed) {
-      state.followed = followed
+      state.followed = followed;
     },
     setFlows(state, flows) {
       state.flows = flows;
@@ -21,18 +21,32 @@ export default new Vuex.Store({
   },
   actions: {
     async checkStatus() { },
+    async addHastag(ctx, hashtag) {
+    const hash = await ax.post(
+      `${ctx.state.API}/addhashtag`,
+      { hashtag },
+      {
+        headers: {
+          authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
+        },
+      }
+    );
+      console.log('HASHTAG ADDED', hash)
+    },
     async followedHashtags(ctx) {
-      const followed = await ax.get(`${ctx.state.API}/followedhashtags`,
-       
+      const followed = await ax.get(
+        `${ctx.state.API}/followedhashtags`,
+
         {
           headers: {
-            'authorization': `Bearer ${sessionStorage.getItem("shuiToken")}`,
+            authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
-        });
+        }
+      );
       console.log("Followed_Hashtags in vuex", followed);
-      ctx.commit('setFollowed', followed.data)
+      ctx.commit("setFollowed", followed.data);
     },
-    async createFlow(ctx,newFlow) {
+    async createFlow(ctx, newFlow) {
       const createdflow = await ax.post(
         `${ctx.state.API}/newflow`,
         {
@@ -41,18 +55,18 @@ export default new Vuex.Store({
         },
         {
           headers: {
-            'authorization': `Bearer ${sessionStorage.getItem("shuiToken")}`,
+            authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
         }
       );
-      router.push('/flows')
+      router.push("/flows");
       console.log("newflow", createdflow);
     },
     async getFlows(ctx) {
       try {
         const flows = await ax.get(`${ctx.state.API}/flows`, {
           headers: {
-            'authorization': `Bearer ${sessionStorage.getItem("shuiToken")}`,
+            authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
         });
         console.log("FLOWS", flows);
@@ -84,12 +98,17 @@ export default new Vuex.Store({
         console.log("TOKEN & USERKEY", token.data);
         sessionStorage.setItem("shuiToken", token.data.token);
         router.push("/flows");
-
       } catch (error) {
         console.error(error);
       }
     },
   },
   modules: {},
-  
+  getters: {
+    allHashtags(state) {
+      return state.flows
+        .map((flow) => flow.hashtags)
+        // .reduce((arr, elem) => arr.concat(elem))
+    },
+  },
 });

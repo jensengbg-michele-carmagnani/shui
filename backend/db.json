@@ -4,7 +4,22 @@
       "uuid": "VZc70DGr4",
       "username": "michele",
       "password": "U2FsdGVkX1/+lwaVajFxIOtPuceeWto4joe8Tohj+Ws=",
-      "followedhashtags": ["#cycling", "#sunny", "#running"]
+      "followedhashtags": [
+        "# cycling",
+        "#sunny",
+        "#running",
+        "# cycling",
+        "# cycling",
+        "#sunny",
+        "#running",
+        "# cycling"
+      ]
+    },
+    {
+      "uuid": "HbjY1n4OG",
+      "username": "marco",
+      "password": "U2FsdGVkX1+8afTnWGeGanHuJ4NBNXwB2NB3Rqeaubs=",
+      "followedhashtags": []
     }
   ],
   "flows": [
@@ -19,7 +34,7 @@
     {
       "flowId": "60RmoJhpR",
       "date": "2021-04-01T11:59:30.510Z",
-      "hashtags": "#weeken #running ",
+      "hashtags": " #weeken #running ",
       "info": "dfasfadsf",
       "author": "michele",
       "owner": "U2FsdGVkX18e0h3tD8v5cjdqLDG0v9vjXvmKUFHAtAU="
@@ -27,7 +42,7 @@
     {
       "flowId": "estUb32rb",
       "date": "2021-04-01T12:03:31.928Z",
-      "hashtags": "#allarm, #göteborg",
+      "hashtags": " #allarm #göteborg",
       "info": "Fire at the domkyrka do not go through the area because of the intese smoke.",
       "author": "michele",
       "owner": "U2FsdGVkX19KO/987ARGueGPP9y+7+PzjillvZaqCaE="
@@ -35,7 +50,7 @@
     {
       "flowId": "nzxIoGBIa",
       "date": "2021-04-01T12:04:47.514Z",
-      "hashtags": "#hello",
+      "hashtags": " #hello",
       "info": "dsfasfsa",
       "author": "michele",
       "owner": "U2FsdGVkX199IYIczzVK2SiOfd3GgQzFfRC4p7vpHwQ="
@@ -43,7 +58,7 @@
     {
       "flowId": "-BmemN9Xm",
       "date": "2021-04-01T12:10:11.273Z",
-      "hashtags": "#Påsk",
+      "hashtags": " #Påsk",
       "info": "Påsk på malmö ",
       "author": "michele",
       "owner": "U2FsdGVkX1+5zupyqpYu+hzwMlrqLu4VpPsBUpKD0Z0="
@@ -51,10 +66,18 @@
     {
       "flowId": "A1L62IMTl",
       "date": "2021-04-01T12:12:56.785Z",
-      "hashtags": "#programmimng #hard-time",
+      "hashtags": " #programmimng #hard-time",
       "info": "By from my room ",
       "author": "michele",
       "owner": "U2FsdGVkX19yc1mKZUC9Jd666hvILVInUvE84rEb8KE="
+    },
+    {
+      "flowId": "3vETk-51h",
+      "date": "2021-04-03T20:42:23.005Z",
+      "hashtags": "#milan #emergency",
+      "info": "emergency in Milan",
+      "author": "marco",
+      "owner": "U2FsdGVkX18+PDeh+P0VYc6WrBlHJ+7d/eLoepYYEN0="
     }
   ]
 }

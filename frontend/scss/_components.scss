@@ -15,7 +15,6 @@
     width: 90%;
     height: 170px;
     background-color: #ffff;
-    
 
     .date {
       margin: 0.3rem 0 0.5rem 0.5rem;
@@ -44,20 +43,24 @@
     }
   }
 }
-#settings{
+#settings {
+  
   width: 100px;
   height: auto;
   background-color: rgb(111, 153, 139);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  
+  margin: .4rem 0 .4rem 0;
+  padding: .4rem 0 .4rem 0;
+  background-color: #f05e5e;
 
-  .hashtag{
-   padding-right: .4rem;
-  }
-  .trash{
-    width:20px;
-    height: 20px;
-  }
+  
+   
+   .trash {
+     width: 20px;
+     height: 20px;
+     background-color: #f57d7d;
+   }
+
 }

@@ -1,17 +1,35 @@
 <template>
   <section id="flows">
-    <section class="container-settings">
-      <h2 class="streams">streams you follow</h2>
+    <section
+      :class="{ active: isShow, hide: !isShow }"
+      class="container-settings"
+    >
       <article class="container-hastags">
-        <Settings
-          v-for="(followed, index) in followeds"
-          :key="index"
-          :hashtags="followed"
-        />
+        <h3 class="title">streams</h3>
+        <article class="hashtags">
+          <Settings
+            v-for="(followed, index) in followeds"
+            :key="index"
+            :hashtags="followed"
+          />
+        </article>
+      </article>
+
+      <article class="emergency">
+        <select   class="hashtag" type="text" name="hashtag" v-model="hashtag">
+          <option
+           @click="addHashtag"
+            v-for="(allHashtag, index) in allHashtags"
+            :key="index"
+            :value="allHashtag"
+            >{{ allHashtag }}</option
+          >
+        </select>
+        <button class="btn-emergency">Shit, theyre on me!!</button>
       </article>
     </section>
     <img
-      @click="followedHashtags"
+      @click="showStream"
       class="lable-shui"
       src="../assets/topS.png"
       alt="Shui"
@@ -35,8 +53,15 @@ export default {
     Flow,
     Settings,
   },
+  data() {
+    return {
+      isShow: false,
+      hashtag: String,
+    };
+  },
   beforeMount() {
     this.$store.dispatch("getFlows");
+    this.$store.dispatch("followedHashtags");
   },
   computed: {
     flows() {
@@ -45,13 +70,20 @@ export default {
     followeds() {
       return this.$store.state.followed;
     },
+    allHashtags() {
+      return this.$store.getters.allHashtags;
+    },
   },
   methods: {
+    async addHashtag() {
+      await this.$store.dispatch("addHashtag", this.hashtag);
+      await this.$store.dispatch("followedHashtags");
+    },
     newFlow() {
       this.$router.push("/newflow");
     },
-    followedHashtags() {
-      this.$store.dispatch("followedHashtags");
+    showStream() {
+      this.isShow = !this.isShow;
     },
   },
 };

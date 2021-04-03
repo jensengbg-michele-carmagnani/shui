@@ -12,6 +12,7 @@ const newflow = require("./routes/newflow");
 const hashtags = require("./routes/hashtags");
 const followedhashtags = require("./routes/followedhashtags");
 const deleteuser = require("./routes/deleteuser");
+const addhashtag = require("./routes/addhashtag.js");
 // const lckd =  require('./routes/lckd')
 
 App.use(helmet());
@@ -26,6 +27,7 @@ App.use("/newflow", newflow);
 App.use("/hashtags", hashtags);
 App.use("/followedhashtags", followedhashtags);
 App.use("/deleteuser", deleteuser);
+App.use("/addhashtag", addhashtag);
 // App.use('/lckd', lckd)
 
 App.listen(3000, () => {
