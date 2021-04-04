@@ -21,7 +21,20 @@ export default new Vuex.Store({
   },
   actions: {
     async checkStatus() { },
+    async deleteHashtag(ctx, hashtag) {
+         console.log("hashtag delete Hashtag", hashtag);
+     await ax.delete(
+        `${ctx.state.API}/deletehashtag`,
+        { hashtag },
+        // {
+        //   headers: {
+        //     authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
+        //   },
+        // }
+      );
+    },
     async addHastag(ctx, hashtag) {
+   
     const hash = await ax.post(
       `${ctx.state.API}/addhashtag`,
       { hashtag },

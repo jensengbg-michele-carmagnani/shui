@@ -1,7 +1,12 @@
 <template>
   <section id="settings">
     <p class="hashtag">{{ hashtags }}</p>
-    <img class="trash" src="../assets/trash.svg" alt="" />
+    <img
+      @click="deleteHashtag"
+      class="trash"
+      src="../assets/trash.svg"
+      alt=""
+    />
   </section>
 </template>
 
@@ -14,7 +19,12 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    async deleteHashtag() {
+      await this.$store.dispatch("deleteHashtag", this.hashtags);
+      // this.$store.dispatch("followedHashtags");
+    },
+  },
   computed: {},
 };
 </script>
