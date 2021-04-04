@@ -25,7 +25,7 @@
             >{{ allHashtag }}</option
           >
         </select>
-        <button class="btn-emergency">Shit, theyre on me!!</button>
+        <button @click="deleteUser" class="btn-emergency">Shit, theyre on me!!</button>
       </article>
     </section>
     <img
@@ -75,6 +75,9 @@ export default {
     },
   },
   methods: {
+    deleteUser(){
+      this.$router.push('/userdelete')
+    },
     async addHashtag() {
       await this.$store.dispatch("addHashtag", this.hashtag);
       await this.$store.dispatch("followedHashtags");
