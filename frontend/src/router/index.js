@@ -6,51 +6,65 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/login',
-    name: 'Login  ',
+    path: "/login",
+    name: "Login  ",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Login.vue"),
   },
   {
-    path: '/signup',
-    name: 'SighUp  ',
+    path: "/signup",
+    name: "SighUp  ",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/SignUp.vue')
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/SignUp.vue"),
   },
   {
-    path: '/flows',
-    name: 'Flows  ',
-    // route level code-splitting 
+    path: "/flows",
+    name: "Flows  ",
+    // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* web packChunkName: "about" */ '../views/Flows.vue')
+    component: () =>
+      import(/* web packChunkName: "about" */ "../views/Flows.vue"),
   },
   {
-    path: '/newflow',
-    name: 'Flows  ',
-    // route level code-splitting 
+    path: "/newflow",
+    name: "Flows  ",
+    // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* web packChunkName: "about" */ '../views/NewFlow.vue')
+    component: () =>
+      import(/* web packChunkName: "about" */ "../views/NewFlow.vue"),
   },
   {
-    path: '/removal',
-    name: 'Removal  ',
-    // route level code-splitting 
+    path: "/removeuser",
+    name: "RemoveUser",
+    // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* web packChunkName: "about" */ '../views/Removal.vue')
-  }
-]
+    component: () =>
+      import(/* web packChunkName: "about" */ "../views/RemoveUser.vue"),
+  },
+  {
+    path: "/userdelete",
+    name: "UserDelete",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* web packChunkName: "about" */ "../views/UserDelete.vue"),
+  },
+];
 
 const router = new VueRouter({
   routes
