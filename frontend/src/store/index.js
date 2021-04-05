@@ -21,30 +21,36 @@ export default new Vuex.Store({
   },
   actions: {
     async checkStatus() { },
-    async deleteHashtag(ctx, hashtag) {
-         console.log("hashtag delete Hashtag", hashtag);
-     await ax.delete(
-        `${ctx.state.API}/deletehashtag`,
-        { hashtag },
-        // {
-        //   headers: {
-        //     authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
-        //   },
-        // }
-      );
+    
+    async deleteUser(ctx) {
+      await ax.delete(`${ctx.state.API}/deleteuser`, {
+        headers: {
+          authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
+        }
+      });
     },
-    async addHastag(ctx, hashtag) {
-   
-    const hash = await ax.post(
-      `${ctx.state.API}/addhashtag`,
-      { hashtag },
-      {
+
+    async deleteHashtag(ctx, hashtag) {
+      console.log("hashtag delete Hashtag", hashtag);
+      await ax.delete(`${ctx.state.API}/deletehashtag`, {
         headers: {
           authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
         },
-      }
-    );
-      console.log('HASHTAG ADDED', hash)
+        data: { hashtag },
+      });
+    },
+
+    async addHastag(ctx, hashtag) {
+      const hash = await ax.post(
+        `${ctx.state.API}/addhashtag`,
+        { hashtag },
+        {
+          headers: {
+            authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
+          },
+        }
+      );
+      console.log("HASHTAG ADDED", hash);
     },
     async followedHashtags(ctx) {
       const followed = await ax.get(
@@ -119,9 +125,8 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     allHashtags(state) {
-      return state.flows
-        .map((flow) => flow.hashtags)
-        // .reduce((arr, elem) => arr.concat(elem))
+      return state.flows.map((flow) => flow.hashtags);
+      // .reduce((arr, elem) => arr.concat(elem))
     },
   },
 });

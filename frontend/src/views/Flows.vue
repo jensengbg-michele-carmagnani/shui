@@ -76,6 +76,7 @@ export default {
   },
   methods: {
     deleteUser(){
+      this.$store.dispatch('deleteUser')
       this.$router.push('/userdelete')
     },
     async addHashtag() {

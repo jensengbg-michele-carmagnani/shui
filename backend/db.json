@@ -14,12 +14,6 @@
         "#running",
         "# cycling"
       ]
-    },
-    {
-      "uuid": "HbjY1n4OG",
-      "username": "marco",
-      "password": "U2FsdGVkX1+8afTnWGeGanHuJ4NBNXwB2NB3Rqeaubs=",
-      "followedhashtags": []
     }
   ],
   "flows": [
@@ -76,7 +70,7 @@
       "date": "2021-04-03T20:42:23.005Z",
       "hashtags": "#milan #emergency",
       "info": "emergency in Milan",
-      "author": "marco",
+      "author": "Anonymous",
       "owner": "U2FsdGVkX18+PDeh+P0VYc6WrBlHJ+7d/eLoepYYEN0="
     },
     {

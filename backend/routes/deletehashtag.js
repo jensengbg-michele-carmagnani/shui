@@ -4,7 +4,7 @@ const router = new Router();
 const jwt = require("jsonwebtoken");
 
 router.delete("/", async (req, res) => {
-  console.log("body hashtag ", req.body);
+  console.log("body hashtag ", req.body.hashtag.hashtag);
   const token = req.headers["authorization"].split(" ")[1];
 
   try {
@@ -15,7 +15,7 @@ router.delete("/", async (req, res) => {
     const user = db
       .get("user")
       .find({ uuid: verified_user.uuid })
-      .filer({ followedhashtags: req.body.hashtag })
+      .filter({ followedhashtags: req.body.hashtag.hashtag })
       .remove()
       .write();
 

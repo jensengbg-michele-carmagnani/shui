@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     async deleteHashtag() {
-      await this.$store.dispatch("deleteHashtag", this.hashtags);
+      await this.$store.dispatch("deleteHashtag", {hashtag :this.hashtags});
       // this.$store.dispatch("followedHashtags");
     },
   },

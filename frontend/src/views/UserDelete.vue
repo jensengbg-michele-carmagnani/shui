@@ -1,9 +1,9 @@
 <template>
-  <select  id="user-delete">
+  <section  id="user-delete">
     <img class="goTo-login" @click="goToLogin" src="../assets/topS.png" alt="">
     <p>you no longer exists</p>
     <p>in Shui system</p>
-  </select>
+  </section>
 </template>
 
 <script>
