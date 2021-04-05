@@ -22,7 +22,7 @@ export default {
   methods: {
     async deleteHashtag() {
       await this.$store.dispatch("deleteHashtag", {hashtag :this.hashtags});
-      // this.$store.dispatch("followedHashtags");
+      await this.$store.dispatch("followedHashtags");
     },
   },
   computed: {},

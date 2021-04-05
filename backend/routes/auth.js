@@ -4,7 +4,6 @@ const router = new Router();
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
 
-
 router.post("/login", async (req, res) => {
   console.log("userInfo", req.body);
   // Does user exist??
@@ -15,11 +14,9 @@ router.post("/login", async (req, res) => {
     // Check PWD & compare it with the one in the db
     const bytes = CryptoJS.AES.decrypt(user.password, process.env.SECRET);
     const DECRYPTED_PW = bytes.toString(CryptoJS.enc.Utf8);
-    
-    
+
     //If valid PWD
     if (DECRYPTED_PW == req.body.password) {
-      
       const token = jwt.sign({ uuid: user.uuid }, process.env.JWT_KEY);
 
       // return JWT + KEY to frontend

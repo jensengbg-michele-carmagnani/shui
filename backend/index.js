@@ -14,6 +14,7 @@ const followedhashtags = require("./routes/followedhashtags");
 const deleteuser = require("./routes/deleteuser");
 const addhashtag = require("./routes/addhashtag.js");
 const deletehashtag = require("./routes/deletehashtag.js");
+const isloggedin = require("./routes/isloggedin.js");
 // const lckd =  require('./routes/lckd')
 
 App.use(helmet());
@@ -30,6 +31,7 @@ App.use("/followedhashtags", followedhashtags);
 App.use("/deleteuser", deleteuser);
 App.use("/addhashtag", addhashtag);
 App.use("/deletehashtag", deletehashtag);
+App.use("/isloggedin", isloggedin);
 // App.use('/lckd', lckd)
 
 App.listen(3000, () => {

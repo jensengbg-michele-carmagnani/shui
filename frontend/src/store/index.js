@@ -20,14 +20,34 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    async checkStatus() { },
-    
+    async checkStatus(ctx) {
+      const token = sessionStorage.getItem("shuiToken");
+      console.log('token isLoggedin', typeof(token))
+      
+      if (token) {
+        try {
+          await ax.get(`${ctx.state.API}/isloggedin`, {
+            headers: {
+              authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
+            },
+          });
+          router.push("/flows");
+        } catch (error) {
+          console.error(error);
+        }
+      } else {
+        router.push('/login')
+      }
+    },
+
     async deleteUser(ctx) {
       await ax.delete(`${ctx.state.API}/deleteuser`, {
         headers: {
           authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
-        }
+        },
       });
+      sessionStorage.clear();
+    
     },
 
     async deleteHashtag(ctx, hashtag) {
@@ -38,6 +58,7 @@ export default new Vuex.Store({
         },
         data: { hashtag },
       });
+      
     },
 
     async addHastag(ctx, hashtag) {
@@ -52,6 +73,7 @@ export default new Vuex.Store({
       );
       console.log("HASHTAG ADDED", hash);
     },
+
     async followedHashtags(ctx) {
       const followed = await ax.get(
         `${ctx.state.API}/followedhashtags`,
@@ -62,7 +84,7 @@ export default new Vuex.Store({
           },
         }
       );
-      console.log("Followed_Hashtags in vuex", followed);
+     
       ctx.commit("setFollowed", followed.data);
     },
     async createFlow(ctx, newFlow) {

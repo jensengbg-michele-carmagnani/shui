@@ -59,7 +59,7 @@ export default {
       hashtag: String,
     };
   },
-  beforeMount() {
+  beforeCreate() {
     this.$store.dispatch("getFlows");
     this.$store.dispatch("followedHashtags");
   },
@@ -73,6 +73,7 @@ export default {
     allHashtags() {
       return this.$store.getters.allHashtags;
     },
+     
   },
   methods: {
     deleteUser(){
