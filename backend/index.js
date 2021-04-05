@@ -12,9 +12,9 @@ const newflow = require("./routes/newflow");
 const hashtags = require("./routes/hashtags");
 const followedhashtags = require("./routes/followedhashtags");
 const deleteuser = require("./routes/deleteuser");
-const addhashtag = require("./routes/addhashtag.js");
-const deletehashtag = require("./routes/deletehashtag.js");
-const isloggedin = require("./routes/isloggedin.js");
+const addhashtag = require("./routes/addhashtag");
+const deletehashtag = require("./routes/deletehashtag");
+const isloggedin = require("./routes/isloggedin");
 // const lckd =  require('./routes/lckd')
 
 App.use(helmet());

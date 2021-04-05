@@ -18,13 +18,14 @@
       <article class="emergency">
         <select   class="hashtag" type="text" name="hashtag" v-model="hashtag">
           <option
-           @click="addHashtag"
+          
             v-for="(allHashtag, index) in allHashtags"
             :key="index"
             :value="allHashtag"
             >{{ allHashtag }}</option
           >
         </select>
+        <button @click="addHashtag">addHashtag</button>
         <button @click="deleteUser" class="btn-emergency">Shit, theyre on me!!</button>
       </article>
     </section>

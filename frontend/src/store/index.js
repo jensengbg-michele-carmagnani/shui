@@ -22,8 +22,8 @@ export default new Vuex.Store({
   actions: {
     async checkStatus(ctx) {
       const token = sessionStorage.getItem("shuiToken");
-      console.log('token isLoggedin', typeof(token))
-      
+      console.log("token isLoggedin", typeof token);
+
       if (token) {
         try {
           await ax.get(`${ctx.state.API}/isloggedin`, {
@@ -36,7 +36,7 @@ export default new Vuex.Store({
           console.error(error);
         }
       } else {
-        router.push('/login')
+        router.push("/login");
       }
     },
 
@@ -47,7 +47,6 @@ export default new Vuex.Store({
         },
       });
       sessionStorage.clear();
-    
     },
 
     async deleteHashtag(ctx, hashtag) {
@@ -58,10 +57,10 @@ export default new Vuex.Store({
         },
         data: { hashtag },
       });
-      
     },
 
-    async addHastag(ctx, hashtag) {
+    async addHashtag(ctx, hashtag) {
+      console.log('hashtag to ADD', hashtag)
       const hash = await ax.post(
         `${ctx.state.API}/addhashtag`,
         { hashtag },
@@ -84,7 +83,7 @@ export default new Vuex.Store({
           },
         }
       );
-     
+
       ctx.commit("setFollowed", followed.data);
     },
     async createFlow(ctx, newFlow) {

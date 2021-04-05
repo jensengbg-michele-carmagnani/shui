@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
   try {
     console.log("token ", token);
     const verified_user = jwt.verify(token, process.env.JWT_KEY);
-    console.log("verified user", verified_user);
+    console.log("verified user in followe hashtags", verified_user);
 
     const user = db.get("user").find({ uuid: verified_user.uuid }).value();
 
