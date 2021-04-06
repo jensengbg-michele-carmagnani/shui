@@ -5,7 +5,8 @@ const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
 
 router.post("/login", async (req, res) => {
-  console.log("userInfo", req.body);
+  
+  
   // Does user exist??
   let user = await db.get("user").find({ username: req.body.username }).value();
 

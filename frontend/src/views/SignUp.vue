@@ -23,7 +23,7 @@
       />
     </article>
 
-    <button @click="create" class="btn-letmein">Sign up</button>
+    <button @click="create" class="btn-signup">Sign up</button>
   </section>
 </template>
 

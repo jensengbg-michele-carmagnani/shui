@@ -7,13 +7,14 @@ router.get("/", async (req, res) => {
   const token = req.headers["authorization"].split(" ")[1];
 
   try {
-    console.log("token ", token);
     const verified_user = jwt.verify(token, process.env.JWT_KEY);
-    console.log("verified user in followe hashtags", verified_user);
 
     const user = db.get("user").find({ uuid: verified_user.uuid }).value();
 
-    console.log("floolwed hashtag", user.followedhashtags);
+    // const followedhashtags = user.map(
+    //   (hashtag) => hashtag == user.followedHashtags
+    // );
+    console.log("FOLLOWED HASHTAGS", user);
     res.send(user.followedhashtags);
   } catch (error) {
     console.error(error);

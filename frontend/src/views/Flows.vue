@@ -16,17 +16,18 @@
       </article>
 
       <article class="emergency">
-        <select   class="hashtag" type="text" name="hashtag" v-model="hashtag">
+        <select class="hashtag" type="text" name="hashtag" v-model="hashtag">
           <option
-          
             v-for="(allHashtag, index) in allHashtags"
             :key="index"
             :value="allHashtag"
             >{{ allHashtag }}</option
           >
         </select>
-        <button @click="addHashtag">addHashtag</button>
-        <button @click="deleteUser" class="btn-emergency">Shit, theyre on me!!</button>
+        <button class="add-hashtag" @click="addHashtag">addHashtag</button>
+        <button @click="deleteUser" class="btn-emergency">
+          Shit, theyre on me!!
+        </button>
       </article>
     </section>
     <img
@@ -60,7 +61,7 @@ export default {
       hashtag: String,
     };
   },
-  beforeCreate() {
+  beforeMount() {
     this.$store.dispatch("getFlows");
     this.$store.dispatch("followedHashtags");
   },
@@ -74,16 +75,16 @@ export default {
     allHashtags() {
       return this.$store.getters.allHashtags;
     },
-     
   },
   methods: {
-    deleteUser(){
-      this.$store.dispatch('deleteUser')
-      this.$router.push('/userdelete')
+    deleteUser() {
+      this.$store.dispatch("deleteUser");
+      this.$router.push("/userdelete");
     },
     async addHashtag() {
       await this.$store.dispatch("addHashtag", this.hashtag);
-      await this.$store.dispatch("followedHashtags");
+      await this.$store.dispatch("getFlows");
+       await this.$store.dispatch("followedHashtags");
     },
     newFlow() {
       this.$router.push("/newflow");

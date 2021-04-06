@@ -9,7 +9,7 @@ const shortid = require("shortid");
 
 router.post("/", async (req, res) => {
   const credential = req.body;
-  console.log("NewUser", credential);
+
 
   if (req.body.username && req.body.password) {
     let unavailable = db
@@ -41,7 +41,7 @@ router.post("/", async (req, res) => {
       password: ENCRYPTED_PW, // hashed with bycrypt module
       followedhashtags: [],
     };
-    console.log("User created", user);
+  
 
     // Add user to db 'user'
     await db.get("user").push(user).write();

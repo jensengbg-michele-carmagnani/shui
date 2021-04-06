@@ -94,11 +94,15 @@
       align-items: center;
       flex-flow: column;
       height: 30%;
+      width: 100%;
+    }
+    .btn-signup {
+      width: 90%;
     }
   }
   #flows {
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: var(--main-bg-color);
     padding: 3rem 0 1.5rem 0;
     .lable-shui {
@@ -143,6 +147,11 @@
           justify-content: space-around;
           flex-wrap: wrap;
         }
+      }
+      .add-hashtag{
+        width: 90%;
+     margin: .5rem 0 .5rem 0;
+        background-color: darkgray;
       }
       .emergency {
         display: flex;

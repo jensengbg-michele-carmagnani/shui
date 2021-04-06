@@ -2,14 +2,15 @@ import Vue from "vue";
 import Vuex from "vuex";
 import ax from "axios";
 import router from "./../router";
+//import CryptoJS from "crypto-js";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     API: "http://localhost:3000",
-    flows: Array,
-    followed: Array,
+    flows: [],
+    followed: [],
   },
   mutations: {
     setFollowed(state, followed) {
@@ -60,7 +61,7 @@ export default new Vuex.Store({
     },
 
     async addHashtag(ctx, hashtag) {
-      console.log('hashtag to ADD', hashtag)
+      console.log("hashtag to ADD", hashtag);
       const hash = await ax.post(
         `${ctx.state.API}/addhashtag`,
         { hashtag },
@@ -146,6 +147,7 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     allHashtags(state) {
+      console.log("Flows in Map", state.flows);
       return state.flows.map((flow) => flow.hashtags);
       // .reduce((arr, elem) => arr.concat(elem))
     },

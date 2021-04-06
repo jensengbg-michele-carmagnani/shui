@@ -27,8 +27,8 @@ export default {
     };
   },
   methods: {
-    createFlow() {
-      this.$store.dispatch("createFlow", {
+    async createFlow() {
+      await this.$store.dispatch("createFlow", {
         info: this.info,
         hashtags: this.hashtags,
       });
