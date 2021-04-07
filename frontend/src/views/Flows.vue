@@ -16,7 +16,7 @@
       </article>
 
       <article class="emergency">
-        <select class="hashtag" type="text" name="hashtag" v-model="hashtag">
+        <select class="select-hashtags" type="text" name="hashtag" v-model="hashtag">
           <option
             v-for="(allHashtag, index) in allHashtags"
             :key="index"

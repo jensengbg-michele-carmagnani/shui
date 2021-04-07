@@ -10,6 +10,7 @@ export default new Vuex.Store({
   state: {
     API: "http://localhost:3000",
     flows: [],
+    allFlows:[],
     followed: [],
   },
   mutations: {
@@ -17,7 +18,8 @@ export default new Vuex.Store({
       state.followed = followed;
     },
     setFlows(state, flows) {
-      state.flows = flows;
+      state.flows = flows.flows;
+      state.allFlows = flows.allFlows
     },
   },
   actions: {
@@ -84,7 +86,7 @@ export default new Vuex.Store({
           },
         }
       );
-
+        console.log('FOLLOWEDHASHTAG ',followed)
       ctx.commit("setFollowed", followed.data);
     },
     async createFlow(ctx, newFlow) {
@@ -110,7 +112,8 @@ export default new Vuex.Store({
             authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
         });
-        console.log("FLOWS", flows);
+        console.log('FLOWS IN GETFLOWS',flows.data)
+      
         ctx.commit("setFlows", flows.data);
       } catch (error) {
         console.error(error);
@@ -147,8 +150,11 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     allHashtags(state) {
-      console.log("Flows in Map", state.flows);
-      return state.flows.map((flow) => flow.hashtags);
+      console.log("ALLHASHTAG IN GETTER", state.flows); 
+     
+         
+      return state.allFlows.map((flow) => flow.hashtags);
+    
       // .reduce((arr, elem) => arr.concat(elem))
     },
   },

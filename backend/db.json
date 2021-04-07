@@ -4,56 +4,80 @@
       "uuid": "2twcc50YQ",
       "username": "marco",
       "password": "U2FsdGVkX19Vv71RGJ6P8f9dfQuEeT92u5StC6cPu3E=",
-      "followedhashtags": [
-        [
-          "#second"
-        ],
-        [
-          "#second"
-        ]
-      ]
+      "followedhashtags": []
     },
     {
       "uuid": "YIfPJZYKZ",
       "username": "michele",
       "password": "U2FsdGVkX1/qhngMychY2XNNDSo/+3zbe/jtmvh3ZvY=",
       "followedhashtags": [
-        [
-          "#second"
-        ]
+        "#try",
+        "#ciao"
       ]
     }
   ],
   "flows": [
     {
-      "flowId": "CgliU1M1u",
+      "flowId": "F6el93f24",
       "date": "16/03/2017, 17:46:53",
       "hashtags": [
-        "#running"
+        "#finished"
       ],
       "info": "",
-      "author": "marco",
-      "owner": "U2FsdGVkX18vdTPFadtFzdrG6C/OdVkt8pS/WEalnu0="
+      "author": "michele",
+      "owner": "U2FsdGVkX18aGchsu7aQhhR2bFjjEZvyc0VtFwltOFc="
     },
     {
-      "flowId": "WWrNHkvs6",
+      "flowId": "7BCYHFAgL",
       "date": "16/03/2017, 17:46:53",
       "hashtags": [
-        "#second"
+        "#ciao"
       ],
-      "info": "hello",
-      "author": "marco",
-      "owner": "U2FsdGVkX18D3bmImstcy4DvTgV+31qjNksAx6W+Oh4="
+      "info": "",
+      "author": "michele",
+      "owner": "U2FsdGVkX1/4A2qJ/6bYNaCTFAwuMg9EwGvbMzIOBIM="
     },
     {
-      "flowId": "Q_PZunYtn",
+      "flowId": "D5IU56OHX",
       "date": "16/03/2017, 17:46:53",
       "hashtags": [
-        "#hello"
+        "#last"
       ],
-      "info": "dfasdfasdfda",
-      "author": "marco",
-      "owner": "U2FsdGVkX1/004jDPIr4m7RSNZIMObj9jLJFCUFFUP8="
+      "info": "",
+      "author": "michele",
+      "owner": "U2FsdGVkX1+HrLW264OAaDz3c5fc8xSO4nqSLMHqXFI="
+    },
+    {
+      "flowId": "fOoOQvqEX",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#sanel"
+      ],
+      "info": "",
+      "author": "michele",
+      "owner": "U2FsdGVkX1+EwEoIIdajCKt/jdFSAAYn/35UEFr0GKc="
+    },
+    {
+      "flowId": "zWTEtu1aI",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#fire",
+        "#sjön",
+        ""
+      ],
+      "info": "Problem at sjön, big fire!",
+      "author": "michele",
+      "owner": "U2FsdGVkX1+KUVgGu15PvbW/9C7vjvtuRW4XfVLpzsw="
+    },
+    {
+      "flowId": "9HpdvnvU6",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#try"
+      ],
+      "info": "U2FsdGVkX1/4AmDsTc7egpwrCZbPBbfIxWIUP30wlFY=",
+      "author": "michele",
+      "owner": "U2FsdGVkX185psYVN4mOXnCpQ0BEM1kX0MqVj1G8LRo="
     }
   ]
 }

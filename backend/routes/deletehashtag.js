@@ -4,6 +4,7 @@ const router = new Router();
 const jwt = require("jsonwebtoken");
 
 router.delete("/", async (req, res) => {
+
   console.log("remove this hashtag ", req.body.hashtag.hashtag);
 
   const token = req.headers["authorization"].split(" ")[1];
@@ -20,7 +21,7 @@ router.delete("/", async (req, res) => {
       .remove((hashtag) => hashtag == req.body.hashtag.hashtag)
       .write();
 
-    console.log("userHashtag", userHashtag);
+    console.log("DELETEHASHTAG", userHashtag);
     res.send(userHashtag);
   } catch (error) {
     console.error(error);

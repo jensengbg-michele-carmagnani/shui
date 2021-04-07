@@ -11,17 +11,16 @@ router.get("/", (req, res) => {
   try {
     //verify the token
     const verify_user = jwt.verify(token, process.env.JWT_KEY);
-    console.log("VERIFY TOKEN", verify_user.uuid);
 
     //verify the uuid hashed  user is in the db
     const user = db.get("user").find({ uuid: verify_user.uuid }).value();
-
+    console.log("USER IN FLOW", user.followedhashtags);
     // function for filtering the flows with the hashtags followed by the user
     const filterFlow = (flow) => {
       const filteredHashtags = flow.hashtags.filter((hashtag) =>
         user.followedhashtags.includes(hashtag)
       );
-      console.log(filteredHashtags);
+      console.log("FILTEREDHASHTAG IN FLOW", filteredHashtags);
       return filteredHashtags.length > 0;
     };
     console.log("user ", user.followedhashtags);
@@ -32,23 +31,19 @@ router.get("/", (req, res) => {
         let bytes = CryptoJS.AES.decrypt(flow.info, process.env.SECRET);
         let text = bytes.toString(CryptoJS.enc.Utf8);
         flow.info = text;
-      })
-      // const allFlows = db.get("flows").value();
-
-      // const response = {
-      //   flows: flows,
-      //   allFlows: allFlows,
-      // };
-      // console.log("flows IN FLOW", flows);
-      res.send(flows);
+      });
+      const allFlows = db.get("flows").value();
+      console.log("FLOWS.JS AFTER FILTERED FUNCTION ", flows);
+      res.send({ flows, allFlows });
     } else {
       const allFlows = db.get("flows").value();
+      const flows = db.get("flows").value();
       allFlows.forEach((flow) => {
         let bytes = CryptoJS.AES.decrypt(flow.info, process.env.SECRET);
         let text = bytes.toString(CryptoJS.enc.Utf8);
         flow.info = text;
       });
-      res.send(allFlows);
+      res.send({flows,allFlows});
     }
   } catch (error) {
     console.log(error);
