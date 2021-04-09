@@ -2,15 +2,15 @@ version: '3.4'
 
 services:
   meetup2:
-    image: meetup2
+    image: shui
     build:
-      context: /shui/frontend
+      context: ./frontend
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
     volumes: 
-      - ./src:/app/src 
-      - ./scss:/app/scss
+      - ./frontend/src:/app/src 
+      - ./frontend/scss:/app/scss
     ports:
       - 8080:8080
     command: npm run serve 
@@ -18,7 +18,7 @@ services:
   api:
     image: api
     build:
-      context: /shui/backend
+      context: ./backend
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
