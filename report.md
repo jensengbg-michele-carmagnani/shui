@@ -6,7 +6,7 @@
 
 
 ## Features implemented 
-``` 
+``` vue
 
 
 The challenge in this project is the encryption and decryption of sensitive information contained in the database.
