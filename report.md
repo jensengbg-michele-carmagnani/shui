@@ -17,11 +17,11 @@ I use just to secure the access to the backend as well the information about the
 The token has a time-expired of 15 minutes, after that point the user has to login again. (it has not handled yet the refresh token function)
 ```
  ## User stories  Features
-1. The app allows the user to create a profile.
-2. The user can create a post with the tag.
-3. The user can filter the post by following the tags available.
-4. The user can unfollow the tags previously selected.
-5. The user can cancel his profile from the system.
+> 1. The app allows the user to create a profile.
+> 2. The user can create a post with the tag.
+> 3. The user can filter the post by following the tags available.
+> 4. The user can unfollow the tags previously selected.
+> 5. The user can cancel his profile from the system.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
