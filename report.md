@@ -1,6 +1,6 @@
 # Shui
 
-![](https://github.com/jensengbg-michele-carmagnani/shui/blob/main/frontend/src/assets/logo.png)
+![](https://github.com/jensengbg-michele-carmagnani/shui/blob/main/frontend/src/assets/topS.png)
 
 
 
