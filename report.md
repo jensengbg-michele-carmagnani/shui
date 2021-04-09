@@ -22,3 +22,6 @@ The token has a time-expired of 15 minutes, after that point the user has to log
 3. The user can filter the post by following the tags available.
 4. The user can unfollow the tags previously selected.
 5. The user can cancel his profile from the system.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
