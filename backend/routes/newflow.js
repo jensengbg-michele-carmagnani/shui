@@ -31,7 +31,8 @@ router.post("/", async (req, res) => {
       .get("followedhashtags")
       .push(req.body.hashtags)
       .write();
-    console.log("followed", followedHashtags);
+    
+    
     // create the new flow
     const newflow = {
       flowId: shortid.generate(),

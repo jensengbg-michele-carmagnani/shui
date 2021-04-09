@@ -12,7 +12,6 @@ export default new Vuex.Store({
     flows: [],
     allFlows: [],
     followed: [],
-    SECRET: "dasfascergeqdsaf<dfas>!öäÅk*;",
   },
   mutations: {
     setFollowed(state, followed) {
@@ -26,7 +25,6 @@ export default new Vuex.Store({
   actions: {
     async checkStatus(ctx) {
       const token = sessionStorage.getItem("shuiToken");
-      console.log("token isLoggedin", typeof token);
 
       if (token) {
         try {
@@ -54,7 +52,6 @@ export default new Vuex.Store({
     },
 
     async deleteHashtag(ctx, hashtag) {
-      console.log("hashtag delete Hashtag", hashtag);
       await ax.delete(`${ctx.state.API}/deletehashtag`, {
         headers: {
           authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
@@ -64,8 +61,7 @@ export default new Vuex.Store({
     },
 
     async addHashtag(ctx, hashtag) {
-      console.log("hashtag to ADD", hashtag);
-      const hash = await ax.post(
+      await ax.post(
         `${ctx.state.API}/addhashtag`,
         { hashtag },
         {
@@ -74,7 +70,6 @@ export default new Vuex.Store({
           },
         }
       );
-      console.log("HASHTAG ADDED", hash);
     },
 
     async followedHashtags(ctx) {
@@ -87,11 +82,11 @@ export default new Vuex.Store({
           },
         }
       );
-      console.log("FOLLOWEDHASHTAG ", followed);
+
       ctx.commit("setFollowed", followed.data);
     },
     async createFlow(ctx, newFlow) {
-      const createdflow = await ax.post(
+      await ax.post(
         `${ctx.state.API}/newflow`,
         {
           info: newFlow.info,
@@ -104,7 +99,6 @@ export default new Vuex.Store({
         }
       );
       router.push("/flows");
-      console.log("newflow", createdflow);
     },
     async getFlows(ctx) {
       try {
@@ -113,21 +107,28 @@ export default new Vuex.Store({
             authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
         });
-        console.log("FLOWS IN GETFLOWS", flows.data);
-        console.log("CRIPTOJS IN INDEX", CryptoJS);
+        
+        
 
-         flows.data.flows.forEach((flow) => {
-          let bytes = CryptoJS.AES.decrypt(flow.info, sessionStorage.getItem('userKey'));
+        // decrypting user the userKey in the session storage
+        flows.data.flows.forEach((flow) => {
+          let bytes = CryptoJS.AES.decrypt(
+            flow.info,
+            sessionStorage.getItem("userKey")
+          );
           let text = bytes.toString(CryptoJS.enc.Utf8);
           flow.info = text;
         });
+        // decrypting user the userKey in the session storage
         flows.data.allFlows.forEach((flow) => {
-          let bytes = CryptoJS.AES.decrypt(flow.info, sessionStorage.getItem('userKey'));
+          let bytes = CryptoJS.AES.decrypt(
+            flow.info,
+            sessionStorage.getItem("userKey")
+          );
           let text = bytes.toString(CryptoJS.enc.Utf8);
           flow.info = text;
         });
-        console.log("DECRYPTED FLOWS INDEX ", flows.data.flows + flows.data.allFlows);
-        console.log("FLOWS IN INDEX ", flows.data);
+        
         ctx.commit("setFlows", flows.data);
       } catch (error) {
         console.error(error);
@@ -135,11 +136,10 @@ export default new Vuex.Store({
     },
     async signup(ctx, data) {
       try {
-        const res = await ax.post(`${ctx.state.API}/user`, {
+        await ax.post(`${ctx.state.API}/user`, {
           username: data.username,
           password: data.password,
         });
-        console.log("NEW USER", res);
 
         // goto  flows page
         router.push("/login");
@@ -165,11 +165,7 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     allHashtags(state) {
-      console.log("ALLHASHTAG IN GETTER", state.flows);
-
       return state.allFlows.map((flow) => flow.hashtags);
-
-      // .reduce((arr, elem) => arr.concat(elem))
     },
   },
 });

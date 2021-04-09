@@ -6,11 +6,8 @@ const jwt = require("jsonwebtoken");
 router.delete("/", (req, res) => {
   const token = req.headers["authorization"].split(" ")[1];
 
-  
   try {
     const verified_user = jwt.verify(token, process.env.JWT_KEY);
-   
-    
 
     let user = db.get("user").find({ uuid: verified_user.uuid }).value();
     let flows = db
@@ -22,21 +19,6 @@ router.delete("/", (req, res) => {
         }
       })
       .write();
-  
-    
-    // let newFlows = flows.map((flow) => ({
-    //   flowId: flow.flowId,
-    //   hashtag: flow.hashtag,
-    //   info: flow.info,
-    //   author: "anonymous",
-    // }));
-    // console.log("newflows", newFlows);
-    // let filterd = db
-    //   .get("flows")
-    //   .filter({ author: user.username })
-    //   .assign(newFlows)
-    //   .write();
-    // console.log("filtered", filterd);
 
     //remove user
     db.get("user").remove({ uuid: verified_user.uuid }).write();

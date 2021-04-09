@@ -10,13 +10,12 @@ router.get("/", async (req, res) => {
     const verified_user = jwt.verify(token, process.env.JWT_KEY);
 
     const user = db.get("user").find({ uuid: verified_user.uuid }).value();
-    
-     const followed = [].concat.apply([], user.followedhashtags);
-    // const followed = user.followedhashtags; 
-    console.log("FOLLOWEDHASHTAGS.JS FOLLOWED HASHTAGS IN ", followed);
+
+    const followed = [].concat.apply([], user.followedhashtags);
+    // const followed = user.followedhashtags;
+
     res.send(followed);
   } catch (error) {
-    console.error(error);
     res.sendStatus(401);
   }
 });

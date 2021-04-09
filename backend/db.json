@@ -6,6 +6,19 @@
       "username": "sanel",
       "password": "U2FsdGVkX18CpusF+oMcYKVQDlvKg1UeVONU83V6Mz0=",
       "followedhashtags": []
+    },
+    {
+      "userkey": "U2FsdGVkX190cvNGD23rN57WEMA1Q5UDftYkb5wzkfo=",
+      "uuid": "c0FTSqROb",
+      "username": "michele",
+      "password": "U2FsdGVkX1+aQknQYYP3oq5r0WGNXgax8knuKrsKVoI=",
+      "followedhashtags": [
+        "#sunny",
+        "#HELLO",
+        "#crypto",
+        "#token",
+        "#no, #publicized"
+      ]
     }
   ],
   "flows": [
@@ -18,6 +31,56 @@
       "info": "U2FsdGVkX18LPxzmJV11O2YZSoVSCfZmm+cV7U2sYHQ=",
       "author": "sanel",
       "owner": "U2FsdGVkX1+Y/Hkbq+dW3JW6Ev/s/pAeJgECi9WhTCk="
+    },
+    {
+      "flowId": "YukgOjGCl",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#sunny"
+      ],
+      "info": "U2FsdGVkX1/kgL58ZMT5lfiqltu+TvFJoXwQe8+UUD4=",
+      "author": "michele",
+      "owner": "U2FsdGVkX1/tHd6cbwQxZMFlPlJFO6LkPIs+Q8/KzLA="
+    },
+    {
+      "flowId": "6W0aw1uVe",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#no, #publicized"
+      ],
+      "info": "U2FsdGVkX1/rsz8DHEkdm5nw5u9Tz+K6mYm57NyUQV1mlNHMQ8DKr+BBYrtev+WN",
+      "author": "michele",
+      "owner": "U2FsdGVkX19dHj4pmFLMnj9ZdKuvFBVEqEiqzIZ54a0="
+    },
+    {
+      "flowId": "xUBeiOFeP",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#crypto"
+      ],
+      "info": "U2FsdGVkX18YVCmaRNM39Dp9svzOnqu/YVRdJAWpCHXAwXVlMI6mtRhnQjMBW1i13rEzL1w5Opk/jUN1HW2uDg==",
+      "author": "michele",
+      "owner": "U2FsdGVkX18jgQPsvA+69p0xHKTu6+fjXPUDlWNkUvM="
+    },
+    {
+      "flowId": "hqxjl6lfB",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#token"
+      ],
+      "info": "U2FsdGVkX19fXntj/FiGJw7FT93jh3Y2RaxA9xuohJc+4EgqxjiEvOskmzz+66fAJrTwJFaNteHyxNW7I8HhDb4OCBVIBiDtcX4lF+ZQC1rxreYTfN0aRbAG5tAPli5P",
+      "author": "michele",
+      "owner": "U2FsdGVkX1/HhcQiMNEvhWc4B+TnANG/UZzZHjKT3lM="
+    },
+    {
+      "flowId": "GnOjMFWwU",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#automtic, #followd"
+      ],
+      "info": "U2FsdGVkX18XaMg2Or37OR9kpE3ck25ldgBcZAXG3PfW2GoyjnLDyvofSmHczlrW3lb5iyuGAJsjxxn+0j3rqmBLd7+r57vpqj3yErhYWRfSn/wBxrVQt/dACdlUiOw9IX0xzBMuD4EAIvDCQs4yTw==",
+      "author": "michele",
+      "owner": "U2FsdGVkX1+lmLw1mBBnrSSTjH1KtqPct/fVFprPU6o="
     }
   ]
 }
