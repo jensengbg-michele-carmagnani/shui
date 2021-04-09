@@ -5,7 +5,7 @@
 
 
 
-## Features implemented 
+### Features implemented 
 > 
 The challenge in this project is the encryption and decryption of sensitive information contained in the database.
 The user can create posts to share important information among the other user but this information will be encrypted in the backend. 
