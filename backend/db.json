@@ -10,9 +10,16 @@
       "uuid": "YIfPJZYKZ",
       "username": "michele",
       "password": "U2FsdGVkX1/qhngMychY2XNNDSo/+3zbe/jtmvh3ZvY=",
+      "followedhashtags": []
+    },
+    {
+      "uuid": "j1ooWh2uI",
+      "username": "alessandro",
+      "password": "U2FsdGVkX1+6cP/lCkemsuM2sCUM60PEtsrPCXoNiSg=",
       "followedhashtags": [
-        "#try",
-        "#ciao"
+        "#fire",
+        "#sjön",
+        ""
       ]
     }
   ],
@@ -65,7 +72,7 @@
         "#sjön",
         ""
       ],
-      "info": "Problem at sjön, big fire!",
+      "info": "",
       "author": "michele",
       "owner": "U2FsdGVkX1+KUVgGu15PvbW/9C7vjvtuRW4XfVLpzsw="
     },
@@ -75,7 +82,7 @@
       "hashtags": [
         "#try"
       ],
-      "info": "U2FsdGVkX1/4AmDsTc7egpwrCZbPBbfIxWIUP30wlFY=",
+      "info": "",
       "author": "michele",
       "owner": "U2FsdGVkX185psYVN4mOXnCpQ0BEM1kX0MqVj1G8LRo="
     }
