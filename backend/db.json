@@ -1,90 +1,23 @@
 {
   "user": [
     {
-      "uuid": "2twcc50YQ",
-      "username": "marco",
-      "password": "U2FsdGVkX19Vv71RGJ6P8f9dfQuEeT92u5StC6cPu3E=",
+      "userkey": "U2FsdGVkX18QTHy+29fKv9gykhZ4ibwxmjhmUAEWp0I=",
+      "uuid": "2vvbOwiaY",
+      "username": "sanel",
+      "password": "U2FsdGVkX18CpusF+oMcYKVQDlvKg1UeVONU83V6Mz0=",
       "followedhashtags": []
-    },
-    {
-      "uuid": "YIfPJZYKZ",
-      "username": "michele",
-      "password": "U2FsdGVkX1/qhngMychY2XNNDSo/+3zbe/jtmvh3ZvY=",
-      "followedhashtags": []
-    },
-    {
-      "uuid": "j1ooWh2uI",
-      "username": "alessandro",
-      "password": "U2FsdGVkX1+6cP/lCkemsuM2sCUM60PEtsrPCXoNiSg=",
-      "followedhashtags": [
-        "#fire",
-        "#sjön",
-        ""
-      ]
     }
   ],
   "flows": [
     {
-      "flowId": "F6el93f24",
+      "flowId": "roeZTV4wZ",
       "date": "16/03/2017, 17:46:53",
       "hashtags": [
-        "#finished"
+        "#HELLO"
       ],
-      "info": "",
-      "author": "michele",
-      "owner": "U2FsdGVkX18aGchsu7aQhhR2bFjjEZvyc0VtFwltOFc="
-    },
-    {
-      "flowId": "7BCYHFAgL",
-      "date": "16/03/2017, 17:46:53",
-      "hashtags": [
-        "#ciao"
-      ],
-      "info": "",
-      "author": "michele",
-      "owner": "U2FsdGVkX1/4A2qJ/6bYNaCTFAwuMg9EwGvbMzIOBIM="
-    },
-    {
-      "flowId": "D5IU56OHX",
-      "date": "16/03/2017, 17:46:53",
-      "hashtags": [
-        "#last"
-      ],
-      "info": "",
-      "author": "michele",
-      "owner": "U2FsdGVkX1+HrLW264OAaDz3c5fc8xSO4nqSLMHqXFI="
-    },
-    {
-      "flowId": "fOoOQvqEX",
-      "date": "16/03/2017, 17:46:53",
-      "hashtags": [
-        "#sanel"
-      ],
-      "info": "",
-      "author": "michele",
-      "owner": "U2FsdGVkX1+EwEoIIdajCKt/jdFSAAYn/35UEFr0GKc="
-    },
-    {
-      "flowId": "zWTEtu1aI",
-      "date": "16/03/2017, 17:46:53",
-      "hashtags": [
-        "#fire",
-        "#sjön",
-        ""
-      ],
-      "info": "",
-      "author": "michele",
-      "owner": "U2FsdGVkX1+KUVgGu15PvbW/9C7vjvtuRW4XfVLpzsw="
-    },
-    {
-      "flowId": "9HpdvnvU6",
-      "date": "16/03/2017, 17:46:53",
-      "hashtags": [
-        "#try"
-      ],
-      "info": "",
-      "author": "michele",
-      "owner": "U2FsdGVkX185psYVN4mOXnCpQ0BEM1kX0MqVj1G8LRo="
+      "info": "U2FsdGVkX18LPxzmJV11O2YZSoVSCfZmm+cV7U2sYHQ=",
+      "author": "sanel",
+      "owner": "U2FsdGVkX1+Y/Hkbq+dW3JW6Ev/s/pAeJgECi9WhTCk="
     }
   ]
 }

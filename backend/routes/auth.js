@@ -15,14 +15,18 @@ router.post("/login", async (req, res) => {
     // Check PWD & compare it with the one in the db
     const bytes = CryptoJS.AES.decrypt(user.password, process.env.SECRET);
     const DECRYPTED_PW = bytes.toString(CryptoJS.enc.Utf8);
+    //decrypt userkey for the frontend
+    const bytes2 = CryptoJS.AES.decrypt(user.userkey, process.env.SECRET);
+    const DECRYPTED_USERKEY = bytes2.toString(CryptoJS.enc.Utf8);
 
     //If valid PWD
     if (DECRYPTED_PW == req.body.password) {
-      const token = jwt.sign({ uuid: user.uuid }, process.env.JWT_KEY);
+      const token = jwt.sign({ uuid: user.uuid }, process.env.JWT_KEY, {expiresIn:300});
 
       // return JWT + KEY to frontend
       res.status(201).send({
         token: token,
+        userkey: DECRYPTED_USERKEY
       });
     } else {
       res.status(403).send("Not data for you!");

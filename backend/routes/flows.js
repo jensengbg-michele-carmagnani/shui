@@ -14,6 +14,7 @@ router.get("/", (req, res) => {
 
     //verify the uuid hashed  user is in the db
     const user = db.get("user").find({ uuid: verify_user.uuid }).value();
+
     console.log("USER IN FLOW", user.followedhashtags);
     // function for filtering the flows with the hashtags followed by the user
     const filterFlow = (flow) => {
@@ -24,7 +25,7 @@ router.get("/", (req, res) => {
       return filteredHashtags.length > 0;
     };
     console.log("user ", user.followedhashtags);
-    // if there'is some followed hashtags then user the filterFlow
+    // if there'is some followed hashtags then we use the filterFlow
     if (user.followedhashtags.length > 0) {
       const flows = db.get("flows").value().filter(filterFlow);
       // flows.forEach((flow) => {
@@ -38,11 +39,11 @@ router.get("/", (req, res) => {
     } else {
       const allFlows = db.get("flows").value();
       const flows = db.get("flows").value();
-      allFlows.forEach((flow) => {
-        let bytes = CryptoJS.AES.decrypt(flow.info, process.env.SECRET);
-        let text = bytes.toString(CryptoJS.enc.Utf8);
-        flow.info = text;
-      });
+      // allFlows.forEach((flow) => {
+      //   let bytes = CryptoJS.AES.decrypt(flow.info, process.env.SECRET);
+      //   let text = bytes.toString(CryptoJS.enc.Utf8);
+      //   flow.info = text;
+      // });
       res.send({flows,allFlows});
     }
   } catch (error) {

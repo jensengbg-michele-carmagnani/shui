@@ -29,15 +29,15 @@ router.post("/", async (req, res) => {
       .get("user")
       .find({ uuid: verified_user.uuid })
       .get("followedhashtags")
-      .push(req.body.hashtags )
+      .push(req.body.hashtags)
       .write();
-console.log("followed", followedHashtags);
+    console.log("followed", followedHashtags);
     // create the new flow
     const newflow = {
       flowId: shortid.generate(),
       date: new Date("2017-03-16T17:46:53.677").toLocaleString(),
       hashtags: req.body.hashtags.split(" "),
-      info: CryptoJS.AES.encrypt(req.body.info, process.env.SECRET).toString(),
+      info: CryptoJS.AES.encrypt(req.body.info, process.env.USERKEY).toString(),
       author: user.username,
       owner: ENCRYPTED_OWNER,
     };

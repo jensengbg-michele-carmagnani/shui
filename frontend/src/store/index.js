@@ -115,12 +115,18 @@ export default new Vuex.Store({
         });
         console.log("FLOWS IN GETFLOWS", flows.data);
         console.log("CRIPTOJS IN INDEX", CryptoJS);
-        const decryptedFlows = flows.data.flows.forEach((flow) => {
-          let bytes = CryptoJS.AES.decrypt(flow.info, ctx.state.SECRET);
+
+         flows.data.flows.forEach((flow) => {
+          let bytes = CryptoJS.AES.decrypt(flow.info, sessionStorage.getItem('userKey'));
           let text = bytes.toString(CryptoJS.enc.Utf8);
           flow.info = text;
         });
-        console.log("DECRYPTED FLOWS INDEX ", decryptedFlows);
+        flows.data.allFlows.forEach((flow) => {
+          let bytes = CryptoJS.AES.decrypt(flow.info, sessionStorage.getItem('userKey'));
+          let text = bytes.toString(CryptoJS.enc.Utf8);
+          flow.info = text;
+        });
+        console.log("DECRYPTED FLOWS INDEX ", flows.data.flows + flows.data.allFlows);
         console.log("FLOWS IN INDEX ", flows.data);
         ctx.commit("setFlows", flows.data);
       } catch (error) {
@@ -149,6 +155,7 @@ export default new Vuex.Store({
         });
         console.log("TOKEN & USERKEY", token.data);
         sessionStorage.setItem("shuiToken", token.data.token);
+        sessionStorage.setItem("userKey", token.data.userkey);
         router.push("/flows");
       } catch (error) {
         console.error(error);
