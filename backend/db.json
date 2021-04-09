@@ -19,6 +19,17 @@
         "#token",
         "#no, #publicized"
       ]
+    },
+    {
+      "userkey": "U2FsdGVkX1/Q6+X74XKvHJCDzdeB2VSr6uKNUwgy3Ho=",
+      "uuid": "DXOvIn9Fs",
+      "username": "marco",
+      "password": "U2FsdGVkX1/YhLNpVXb5vcM45LuNhBNNbbfXUr6bGLQ=",
+      "followedhashtags": [
+        "#marco",
+        "#automtic, #followd",
+        "#crypto"
+      ]
     }
   ],
   "flows": [
@@ -81,6 +92,16 @@
       "info": "U2FsdGVkX18XaMg2Or37OR9kpE3ck25ldgBcZAXG3PfW2GoyjnLDyvofSmHczlrW3lb5iyuGAJsjxxn+0j3rqmBLd7+r57vpqj3yErhYWRfSn/wBxrVQt/dACdlUiOw9IX0xzBMuD4EAIvDCQs4yTw==",
       "author": "michele",
       "owner": "U2FsdGVkX1+lmLw1mBBnrSSTjH1KtqPct/fVFprPU6o="
+    },
+    {
+      "flowId": "A-kidtvqC",
+      "date": "16/03/2017, 17:46:53",
+      "hashtags": [
+        "#marco"
+      ],
+      "info": "U2FsdGVkX18Y4ilS2LLiK+m+ArI2NkW4FBaH28r1R/auY8+GcrKmOjVdHBibJTHJ",
+      "author": "marco",
+      "owner": "U2FsdGVkX1/EXkXVSzc0+K98VDQ1PtyM1YVEAO0d6qk="
     }
   ]
 }

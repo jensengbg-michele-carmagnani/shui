@@ -21,7 +21,7 @@ router.post("/login", async (req, res) => {
 
     //If valid PWD
     if (DECRYPTED_PW == req.body.password) {
-      const token = jwt.sign({ uuid: user.uuid }, process.env.JWT_KEY, {expiresIn:700});
+      const token = jwt.sign({ uuid: user.uuid }, process.env.JWT_KEY, {expiresIn:900});
 
       // return JWT + KEY to frontend
       res.status(201).send({

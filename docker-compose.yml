@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  meetup2:
+    image: meetup2
+    build:
+      context: /shui/frontend
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    volumes: 
+      - ./src:/app/src 
+      - ./scss:/app/scss
+    ports:
+      - 8080:8080
+    command: npm run serve 
+
+  api:
+    image: api
+    build:
+      context: /shui/backend
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    volumes: 
+      - ./backend/routes:/app/routes:ro
+      - ./backend/db:/app/db
+    ports:
+      - 3000:3000
