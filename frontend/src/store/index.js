@@ -2,7 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import ax from "axios";
 import router from "./../router";
-//import CryptoJS from "crypto-js";
+import CryptoJS from "crypto-js";
 
 Vue.use(Vuex);
 
@@ -10,8 +10,9 @@ export default new Vuex.Store({
   state: {
     API: "http://localhost:3000",
     flows: [],
-    allFlows:[],
+    allFlows: [],
     followed: [],
+    SECRET: "dasfascergeqdsaf<dfas>!öäÅk*;",
   },
   mutations: {
     setFollowed(state, followed) {
@@ -19,7 +20,7 @@ export default new Vuex.Store({
     },
     setFlows(state, flows) {
       state.flows = flows.flows;
-      state.allFlows = flows.allFlows
+      state.allFlows = flows.allFlows;
     },
   },
   actions: {
@@ -86,7 +87,7 @@ export default new Vuex.Store({
           },
         }
       );
-        console.log('FOLLOWEDHASHTAG ',followed)
+      console.log("FOLLOWEDHASHTAG ", followed);
       ctx.commit("setFollowed", followed.data);
     },
     async createFlow(ctx, newFlow) {
@@ -112,8 +113,15 @@ export default new Vuex.Store({
             authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
         });
-        console.log('FLOWS IN GETFLOWS',flows.data)
-      
+        console.log("FLOWS IN GETFLOWS", flows.data);
+        console.log("CRIPTOJS IN INDEX", CryptoJS);
+        const decryptedFlows = flows.data.flows.forEach((flow) => {
+          let bytes = CryptoJS.AES.decrypt(flow.info, ctx.state.SECRET);
+          let text = bytes.toString(CryptoJS.enc.Utf8);
+          flow.info = text;
+        });
+        console.log("DECRYPTED FLOWS INDEX ", decryptedFlows);
+        console.log("FLOWS IN INDEX ", flows.data);
         ctx.commit("setFlows", flows.data);
       } catch (error) {
         console.error(error);
@@ -150,11 +158,10 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     allHashtags(state) {
-      console.log("ALLHASHTAG IN GETTER", state.flows); 
-     
-         
+      console.log("ALLHASHTAG IN GETTER", state.flows);
+
       return state.allFlows.map((flow) => flow.hashtags);
-    
+
       // .reduce((arr, elem) => arr.concat(elem))
     },
   },

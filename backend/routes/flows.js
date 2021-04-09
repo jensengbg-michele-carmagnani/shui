@@ -27,11 +27,11 @@ router.get("/", (req, res) => {
     // if there'is some followed hashtags then user the filterFlow
     if (user.followedhashtags.length > 0) {
       const flows = db.get("flows").value().filter(filterFlow);
-      flows.forEach((flow) => {
-        let bytes = CryptoJS.AES.decrypt(flow.info, process.env.SECRET);
-        let text = bytes.toString(CryptoJS.enc.Utf8);
-        flow.info = text;
-      });
+      // flows.forEach((flow) => {
+      //   let bytes = CryptoJS.AES.decrypt(flow.info, process.env.SECRET);
+      //   let text = bytes.toString(CryptoJS.enc.Utf8);
+      //   flow.info = text;
+      // });
       const allFlows = db.get("flows").value();
       console.log("FLOWS.JS AFTER FILTERED FUNCTION ", flows);
       res.send({ flows, allFlows });
