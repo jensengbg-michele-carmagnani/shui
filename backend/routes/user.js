@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = new Router();
-const { db } = require("./db");
+const { db } = require("../db/db");
 
 // module required
 const bcrypt = require("bcrypt");
@@ -30,7 +30,10 @@ router.post("/", async (req, res) => {
     //generate userkey
 
     let user = {
-      userkey: CryptoJS.AES.encrypt(process.env.USERKEY, process.env.SECRET).toString(),
+      userkey: CryptoJS.AES.encrypt(
+        process.env.USERKEY,
+        process.env.SECRET
+      ).toString(),
       uuid: shortid.generate(),
       username: req.body.username,
       password: ENCRYPTED_PW, // hashed with bycrypt module

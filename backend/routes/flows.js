@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const jwt = require("jsonwebtoken");
-const { db } = require("./db");
+const { db } = require("../db/db");
 const router = new Router();
 const CryptoJS = require("crypto-js");
 
