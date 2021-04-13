@@ -22,7 +22,7 @@ services:
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
-      env_file: .env
+    env_file: ./backend/.env
     volumes:
       - ./backend/routes:/app/routes:ro
       - ./backend/db:/app/db
